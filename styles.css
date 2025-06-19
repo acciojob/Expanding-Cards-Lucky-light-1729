@@ -1,1 +1,52 @@
-/*  your css code here. If applicable */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+  height: 100vh;
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  width: 90vw;
+  height: 90vh;
+  gap: 10px;
+}
+
+.panel {
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  position: relative;
+  flex: 1;
+  transition: flex 0.7s ease-in;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  cursor: pointer;
+  color: white;
+  overflow: hidden;
+}
+
+.panel .img-text {
+  font-size: 24px;
+  padding: 20px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.panel.active {
+  flex: 5;
+}
+
+.panel.active .img-text {
+  opacity: 1;
+}
